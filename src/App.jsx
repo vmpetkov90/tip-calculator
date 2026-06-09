@@ -83,7 +83,6 @@ function App() {
     }
 
 
-
     e.preventDefault()
     setVariables({ ...variables, [key]: input.value })
   }
@@ -91,6 +90,7 @@ function App() {
   // Reset all values
   function handleReset() {
     setVariables({ bill: 0, tip: 0, people: 0 })
+    document.querySelector('#customTip').value = ''
   }
 
   return (
@@ -105,7 +105,7 @@ function App() {
         <div className="lg:w-235 bg-purple-50 rounded-2xl lg:flex md:p-7 p-5 gap-7 shadow-2xl/30 ">
 
           {/* Left side — Inputs */}
-          <form className="lg:w-1/2 lg:mb-0 mb-10">
+          <div className="lg:w-1/2 lg:mb-0 mb-10">
 
             {/* Bill input */}
             <FormInput
@@ -149,7 +149,7 @@ function App() {
               moveCaretAtEnd={moveCaretAtEnd}
               label={<i className="fa-solid fa-user"></i>}
             />
-          </form>
+          </div>
 
           {/* Right side — Results */}
           <div className="lg:w-1/2 bg-purple-800 rounded-xl md:p-7 p-5 flex flex-col justify-between">
