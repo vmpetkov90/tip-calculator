@@ -30,7 +30,7 @@ export const FormInput = ({
       <input
         className="
           bg-purple-100 block w-full rounded p-3 outline-0
-          text-xl text-right font-bold text-purple-900
+          md:text-xl text-md text-right font-bold text-purple-900
           hover:border-purple-400 focus:border-purple-400
           border-2 border-transparent
         "

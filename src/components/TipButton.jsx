@@ -15,7 +15,7 @@ export const TipButton = ({ value, handleUserInput }) => {
       className="
         tip-button
         bg-purple-900 hover:bg-purple-700
-        text-xl font-bold text-purple-50
+        md:text-xl text-md font-bold text-purple-50
         p-3 rounded cursor-pointer
       "
       value={value}

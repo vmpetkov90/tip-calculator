@@ -94,15 +94,15 @@ function App() {
   }
 
   return (
-    <div className="h-screen w-screen flex justify-center items-center bg-purple-200 font-electrolize p-10">
+    <div className="min-h-screen w-screen flex justify-center items-center bg-purple-200 font-electrolize p-5">
       <div>
         {/* Title */}
-        <h1 className="text-center text-2xl text-purple-800 font-semibold tracking-[10px] uppercase mb-10">
+        <h1 className="text-center text-2xl text-purple-800 font-semibold tracking-[10px] uppercase m-10">
           Splitter
         </h1>
 
         {/* Main container */}
-        <div className="lg:w-235 bg-purple-50 rounded-2xl lg:flex p-7 gap-7 shadow-2xl/30">
+        <div className="lg:w-235 bg-purple-50 rounded-2xl lg:flex md:p-7 p-5 gap-7 shadow-2xl/30 ">
 
           {/* Left side — Inputs */}
           <form className="lg:w-1/2 lg:mb-0 mb-10">
@@ -118,7 +118,7 @@ function App() {
             />
 
             {/* Tip selection */}
-            <div className="my-10">
+            <div className="md:my-10 my-5">
               <h2 className="text-gray-500 mb-1">Select Tip %</h2>
 
               <div className="grid grid-cols-3 gap-3">
@@ -152,16 +152,16 @@ function App() {
           </form>
 
           {/* Right side — Results */}
-          <div className="lg:w-1/2 bg-purple-800 rounded-xl p-7 flex flex-col justify-between">
+          <div className="lg:w-1/2 bg-purple-800 rounded-xl md:p-7 p-5 flex flex-col justify-between">
 
             <div>
               {/* Tip per person */}
               <div className="flex justify-between mb-10">
                 <div>
-                  <p className="text-purple-50 text-lg">Tip Amount</p>
+                  <p className="text-purple-50 md:text-lg text-sm">Tip Amount</p>
                   <p className="text-purple-400 text-sm">/ person</p>
                 </div>
-                <p className="text-5xl text-purple-300 font-medium">
+                <p className="md:text-5xl text-4xl text-purple-300 font-medium">
                   {isFinite(tipPerson) ? `£${tipPerson.toFixed(2)}` : '£0.00'}
                 </p>
               </div>
@@ -169,10 +169,10 @@ function App() {
               {/* Total per person */}
               <div className="flex justify-between">
                 <div>
-                  <p className="text-purple-50 text-lg">Total</p>
+                  <p className="text-purple-50 md:text-lg text-sm">Total</p>
                   <p className="text-purple-400 text-sm">/ person</p>
                 </div>
-                <p className="text-5xl text-purple-300 font-medium">
+                <p className="md:text-5xl text-4xl text-purple-300 font-medium">
                   {isFinite(totalPerson) ? `£${totalPerson.toFixed(2)}` : '£0.00'}
                 </p>
               </div>
